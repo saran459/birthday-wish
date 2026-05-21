@@ -384,6 +384,11 @@ body{
 
 <!-- ══════════════════ PAGE 2 ══════════════════ -->
 <div id="p2" class="pg off">
+  <button class="nbtn" id="voiceBtn">🎙️ Play Birthday Voice</button>
+
+  <audio id="birthdayVoice">
+    <source src="voice.mp3" type="audio/mpeg">
+  </audio>
   <p class="p2t">🎂 Happy Birthday, Magesh!</p>
   <p class="p2s">கேக்கின் மீது கோடு வரைந்து வெட்டுங்கள் ✂</p>
   <div class="ccwrap"><canvas id="cvc"></canvas></div>
@@ -583,6 +588,10 @@ function initCake(){
     m.classList.add('show');
   }
 }
+  G('voiceBtn').addEventListener('click',()=>{
+  G('birthdayVoice').play();
+});
+
 </script>
 </body>
 </html>
